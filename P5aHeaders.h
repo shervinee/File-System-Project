@@ -18,7 +18,7 @@
 #include <time.h>
 
 
-/* to store the hidden file detail into a Binary Search Tree */
+/* to store the hidden file detail into a Binary Search Tree so we can use it*/
 typedef struct FileN
 {
     char *name;
@@ -28,7 +28,7 @@ typedef struct FileN
     struct FileN* rightChild;
 }FileN;
 
-FileN* createNode(off_t key, const char* name, time_t modifTime);//for crating a node
+FileN* createNode(off_t key, const char* name, time_t modifTime);//for creating a node
 FileN* insert(struct FileN* root, off_t key, const char* name, time_t modifTime);//to insert
 void* checkedMalloc(size_t size);//for checking malloc
 FileN *findHiddenFiles(const char filePath[]);
